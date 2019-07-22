@@ -1,0 +1,45 @@
+.navigation_wrapper {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	height: 128px;
+	align-items: center;
+}
+
+
+.logo {
+	margin-right: 190px;
+}
+
+.navigation {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.navigation_item {
+	margin-right: 40px;
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.navigation__link {
+	text-decoration: none; 
+	color: rgba(11, 12, 17, 0.9);
+	font-size: 9px;
+	font-weight: 700;
+	line-height: 1;
+	text-transform: uppercase;
+	font-family: "League-Spartan", sans-serif;
+	font-weight: 700;
+	letter-spacing: 5.58px;
+}
