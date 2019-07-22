@@ -1,3 +1,7 @@
+.slide-wrapper {
+	position: relative;
+}
+
 .slide-item{
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -42,16 +46,58 @@
 	line-height: 24px;
 	letter-spacing: 0.35px;
 }
-
+	
 .slide-item_img {
+	width: 1016px;
+	height: 572px;
+	background-size: cover;	
+	background-position: center;
+	background-repeat: no-repeat;
+	box-shadow: -16px 25px 26px rgba(11, 12, 17, 0.2);
+}
+
+.slide-item_img--bg-1 {	
+	background-image: url("../img/img/img-header.jpg");
+}
+
+.slide-controller {
+	position: absolute;
+	width: 81px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.slide-controls_left {
 	
 }
 
-.slide-item_img--bg-1 {
-	width: 1016px;
-	height: 572px;
-	background-image: url("../img/img/img-header.jpg");
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+.slide-controls_right {
+
+}
+
+.slide-control-number {
+	font-family: 'League-Spartan', sans-serif;
+	font-size: 10px;
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	margin-top: 5px;
+}
+
+.slide-control-number__active{
+	color: #5da8ef;
+}
+
+.slide-control-number__from {
+	color: #ebebeb;
+}
+
+.slide-control-number__total {
+	color: #262626;
 }
