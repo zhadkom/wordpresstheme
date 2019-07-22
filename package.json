@@ -20,7 +20,9 @@
 		"lodash": ">=4.17.13",
 		"axios": ">=0.18.1",
 		"cryptiles": ">=4.1.2",
-		"hoek": ">=4.2.1"
+		"hoek": ">=4.2.1",
+		"lodash.merge": ">=4.6.2",
+		"lodash.template": ">=4.5.0"
 	},
 	"description": ""
 }
