@@ -38,7 +38,7 @@
 	line-height: 1;
 	text-transform: uppercase;
 	letter-spacing: 5.4px;
-	
+	// box styling
 	width: 540px;
 	height: 50px;
 	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
@@ -46,8 +46,34 @@
 	border: 1px solid rgba(97, 97, 97, 0.0);
 	padding-left: 30px;
 	padding-right: 30px;
+
+	&:active,
+	&:focus {
+		border-color: rgba(97, 97, 97, 0.15);
+		outline: none;
+	}
 }
 
 .subscribe__btn {
-	
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
+	background-color: #5da8ef;
+	width: 50px;
+	height: 50px;
+	background-image: url('../img/controls/subscribe-arrow.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: initial;
+	cursor: pointer;
+	border: 0px none;
+	transition: 0.2s ease-in;
+	outline: none;
+
+	&:hover,
+	&:focus {
+		background-color: lighten(#5da8ef, 5%);
+	}
+
+	&:active {
+		background-color: darken(#5da8ef, 10%);
+	}
 }
