@@ -75,12 +75,26 @@
 	width: 10px;
 	height: 10px;
 	position: absolute;
-	right: -40px;
+	right: -30px;
 	top: 0;
 	
 	.article--odd & {
 		left: -30px;
 		right: auto;
+	}
+}
+
+.article--even & {
+	@media (max-width: 1400px) {
+
+		.site-watermark__content {
+			color: rgba(255, 255, 255, 0.8);
+		}
+		
+		.article__prev-desc {
+			right: 30px;
+			top: 30px;
+		}
 	}
 }
 
