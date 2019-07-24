@@ -5,13 +5,16 @@
         <link rel="stylesheet" href="libs/bootstrap-reboot/bootstrap-reboot.min.css">
         <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Playfair+Display:400,700|Poppins:300&display=swap&subset=cyrillic-ext" rel="stylesheet">
         <link rel="stylesheet" href="fonts/league-spartan/league-spartan.css">
-        
+        <link rel="stylesheet" href="libs/owlcarousel2/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="libs/owlcarousel2/assets/owl.theme.default.min.css">
         <link rel="stylesheet" href="css/main.css">
         <title>Wordpress theme</title>
     </head>
     <body>
 
-        @@include('blocks/header.html')
+        
+        @@include('blocks/navigation.html')
+        @@include('blocks/slider.html')
         @@include('blocks/quote.html')
         @@include('blocks/media.html')
         @@include('blocks/shop.html')
@@ -20,6 +23,10 @@
         @@include('blocks/subscribe.html')
         @@include('blocks/adress.html')
         @@include('blocks/footer.html')
+
+        <script src="libs/jquery/jquery3.4.1.min.js"></script>
+        <script src="libs/owlcarousel2/owl.carousel.min.js"></script>
+        <script src="js/main.js"></script>
         
 
     </body>

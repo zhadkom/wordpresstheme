@@ -1,5 +1,12 @@
 .slide-wrapper {
 	position: relative;
+	width: 100%;
+	overflow: hidden;
+	padding-bottom: 95px;
+}
+
+#headerSlider.owl-carousel .owl-stage-outer {
+	overflow: visible;
 }
 
 .slide-item{
@@ -72,14 +79,12 @@
 	align-items: center;
 	left: 0;
 	bottom: 0;
+	z-index: 9;
 }
 
-.slide-controls_left {
-	
-}
-
+.slide-controls_left,
 .slide-controls_right {
-
+	cursor: pointer;
 }
 
 .slide-control-number {

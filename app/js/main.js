@@ -1,1 +1,76 @@
-console.log('Hello Surfing!');
+$(document).ready(function() {
+
+//////////////////////////////////////
+/************************************/
+/*									*/
+/*			Header slider 			*/
+/*									*/
+/************************************/
+//////////////////////////////////////
+
+	// Header slider DOM variables
+	const headerSlider = $('#header-slider');
+	var	prevHeaderSlider = $('#header-slider__left'),
+		nextHeaderSlider = $('#header-slider__right');
+
+
+	// Initialize slides counter
+	headerSlider.on('initialized.owl.carousel initialize.owl.carousel', function(event) {
+		$('.slide-control-number__active').text(event.item.index+1);
+		$('.slide-control-number__total').text(event.item.count);
+	});
+
+	// Describe slides counter
+	headerSlider.on('changed.owl.carousel', function(event) {
+		$('.slide-control-number__active').text(event.item.index + 1);
+		$('.slide-control-number__total').text(event.item.count);
+	});
+
+	//Initialize slider
+	headerSlider.owlCarousel({
+		items: 1,
+		rewind: true,
+		dots: false,
+		smartSpeed: 1000,
+		autoplay: true,
+		auroplaySpeed: 25000
+	});
+
+	// Describe navigation arrows for slider
+	prevHeaderSlider.click(function() {
+		headerSlider.trigger('prev.owl.carousel');
+	});
+	nextHeaderSlider.click(function() {
+		headerSlider.trigger('next.owl.carousel');
+	});
+
+//////////////////////////////////////
+/************************************/
+/*									*/
+/*			Shop slider 			*/
+/*									*/
+/************************************/
+//////////////////////////////////////
+
+// Shop slider DOM variables
+const shopSlider = $('#shop-slider');
+var prevShopSlider = $('#shop-slider__left'),
+	nextShopSlider = $('#shop-slider__right');
+
+//Initialize slider
+	shopSlider.owlCarousel({
+		items: 3,
+		loop: true,
+		dots: false,
+		smartSpeed: 1000
+	});
+
+	// Describe navigation arrows for slider
+	shopSlider.click(function() {
+		prevShopSlider.trigger('prev.owl.carousel');
+	});
+	nextHeaderSlider.click(function() {
+		nextShopSlider.trigger('next.owl.carousel');
+	});
+
+});
