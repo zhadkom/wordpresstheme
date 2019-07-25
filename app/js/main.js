@@ -54,23 +54,24 @@ $(document).ready(function() {
 
 // Shop slider DOM variables
 const shopSlider = $('#shop-slider');
-var prevShopSlider = $('#shop-slider__left'),
-	nextShopSlider = $('#shop-slider__right');
+var prevShopSlider = $('#shop-slider__prev'),
+	nextShopSlider = $('#shop-slider__next');
 
 //Initialize slider
 	shopSlider.owlCarousel({
 		items: 3,
 		loop: true,
 		dots: false,
-		smartSpeed: 1000
+		smartSpeed: 700,
+		margin: 185
 	});
 
 	// Describe navigation arrows for slider
-	shopSlider.click(function() {
-		prevShopSlider.trigger('prev.owl.carousel');
+	prevShopSlider.click(function() {
+		shopSlider.trigger('prev.owl.carousel');
 	});
-	nextHeaderSlider.click(function() {
-		nextShopSlider.trigger('next.owl.carousel');
+	nextShopSlider.click(function() {
+		shopSlider.trigger('next.owl.carousel');
 	});
 
 });
