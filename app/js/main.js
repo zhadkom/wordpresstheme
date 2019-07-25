@@ -32,8 +32,8 @@ $(document).ready(function() {
 		rewind: true,
 		dots: false,
 		smartSpeed: 1000,
-		autoplay: true,
-		auroplaySpeed: 25000
+		autoplay: false,
+		autoplaySpeed: 25000
 	});
 
 	// Describe navigation arrows for slider
