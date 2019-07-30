@@ -29,11 +29,11 @@ $(document).ready(function() {
 	//Initialize slider
 	headerSlider.owlCarousel({
 		items: 1,
+		autoplayHoverPause: true,
 		rewind: true,
 		dots: false,
 		smartSpeed: 1000,
-		autoplay: false,
-		autoplaySpeed: 25000
+		autoplay: true
 	});
 
 	// Describe navigation arrows for slider
@@ -53,25 +53,29 @@ $(document).ready(function() {
 //////////////////////////////////////
 
 // Shop slider DOM variables
-const shopSlider = $('#shop-slider');
-var prevShopSlider = $('#shop-slider__prev'),
-	nextShopSlider = $('#shop-slider__next');
+	const shopSlider   = $('#shop-slider');
 
-//Initialize slider
+	//Initialize slider
 	shopSlider.owlCarousel({
-		items: 3,
 		loop: true,
+		nav: true,
 		dots: false,
-		smartSpeed: 700,
-		margin: 185
-	});
-
-	// Describe navigation arrows for slider
-	prevShopSlider.click(function() {
-		shopSlider.trigger('prev.owl.carousel');
-	});
-	nextShopSlider.click(function() {
-		shopSlider.trigger('next.owl.carousel');
+		smartSpeed: 500,
+		margin: 2,
+		responsive:{
+       		0:{
+            	items:1
+       	 	},
+	        600:{
+	            items:2
+	        },            
+	        960:{
+	            items:2
+	        },
+	        1200:{
+	            items:3
+	        }
+    	}
 	});
 
 });
